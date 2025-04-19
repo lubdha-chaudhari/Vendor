@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:layout_marginBottom="8dp"
+    android:background="?android:attr/selectableItemBackground">
+
+    <!-- Menu Item Name -->
+    <EditText
+        android:id="@+id/item_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:hint="Item Name"
+        android:inputType="text"
+        android:padding="8dp"
+        android:layout_marginEnd="8dp"
+        android:importantForAccessibility="yes"
+        android:contentDescription="Menu item name field" />
+
+    <!-- Menu Item Price -->
+    <EditText
+        android:id="@+id/item_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Price"
+        android:inputType="numberDecimal"
+        android:padding="8dp"
+        android:importantForAccessibility="yes"
+        android:contentDescription="Menu item price field" />
+
+    <!-- Button to Remove Item (Optional) -->
+    <ImageView
+        android:id="@+id/btn_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_menu_delete"
+        android:layout_marginLeft="8dp"
+        android:clickable="true"
+        android:importantForAccessibility="yes"
+        android:contentDescription="Remove menu item"
+        android:onClick="removeMenuItem" />
+
+</LinearLayout>

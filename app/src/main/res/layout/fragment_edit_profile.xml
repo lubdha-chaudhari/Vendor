@@ -1,0 +1,195 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Profile Image -->
+        <ImageView
+            android:id="@+id/profile_image_view"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/ic_add"
+            android:scaleType="centerCrop"
+            android:padding="8dp" />
+
+        <!-- Select Image Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_select_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Profile Picture"
+            android:layout_gravity="center_horizontal"
+            app:icon="@drawable/ic_camera"
+            app:iconTint="@android:color/white"
+            app:cornerRadius="8dp"
+            app:backgroundTint="#FF6D00"
+            android:textColor="@android:color/white" />
+
+        <!-- Stall Name -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Stall Name"
+            app:startIconDrawable="@drawable/ic_store"
+            app:startIconTint="#FF6D00">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/stall_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#333" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Category -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Category"
+            app:startIconDrawable="@drawable/ic_category"
+            app:startIconTint="#FF6D00">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="#333" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Contact Number -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Contact Number"
+            app:startIconDrawable="@drawable/ic_phone"
+            app:startIconTint="#FF6D00">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/contact_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:textColor="#333" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Address -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="24dp"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_location"
+                android:tint="#FF6D00" />
+
+            <TextView
+                android:id="@+id/address_textview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:text="Address will appear here"
+                android:textColor="#333"/>
+        </LinearLayout>
+
+        <!-- Online/Offline Switch -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="24dp"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_online"
+                android:tint="#FF6D00" />
+
+            <Switch
+                android:id="@+id/switch_online"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Online/Offline"
+               />
+        </LinearLayout>
+
+        <!-- Menu Items Container -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Menu Items"
+            android:textColor="#FF6D00"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp" />
+
+        <LinearLayout
+            android:id="@+id/menu_items_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp" />
+
+        <!-- Add Menu Item Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/add_menu_item_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Menu Item"
+            android:layout_marginTop="16dp"
+            app:icon="@drawable/ic_add_circle"
+            app:iconTint="@android:color/white"
+            app:cornerRadius="8dp"
+            app:backgroundTint="#FF6D00"
+            android:textColor="@android:color/white" />
+
+        <!-- Save Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/save_button"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Save Profile"
+            android:layout_marginTop="24dp"
+            app:icon="@drawable/ic_save"
+            app:iconTint="@android:color/white"
+            app:cornerRadius="12dp"
+            app:backgroundTint="#255F3D"
+            android:textColor="@android:color/white" />
+
+        <!-- Update Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/update_button"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Update Profile"
+            android:layout_marginTop="8dp"
+            app:icon="@drawable/ic_update"
+            app:iconTint="@android:color/white"
+            app:cornerRadius="12dp"
+            app:backgroundTint="#304FFE"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</ScrollView>

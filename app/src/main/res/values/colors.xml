@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="menu_item_normal">#FFFFFF</color>
+    <color name="menu_item_pressed">#FFF3E0</color>
+    <color name="menu_item_selected">#FFE0B2</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primary_color">#4361EE</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="light_gray_background">#F5F5F5</color>
+    <color name="light_gray_stroke">#E0E0E0</color>
+    <color name="switch_track">#BDBDBD</color>
+</resources>
